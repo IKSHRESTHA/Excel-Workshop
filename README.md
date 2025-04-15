@@ -5,9 +5,6 @@ Welcome to the MTSU Excel Workshop repository! This project is created for the *
 ## About the Project
 This repository serves as a learning resource for aspiring actuaries and students pursuing actuarial science. The examples provided here are simple and designed for educational purposes only. The content will be expanded over time to include:
 
-- **Life Insurance Pricing** examples in Excel.
-- **Reserving Techniques** in Excel.
-
 ## Current Content
 - **Useful Excel Functions**: A collection of the most commonly used Excel functions in actuarial science.
 - **Best Practices in Excel**: Tips and techniques to improve efficiency and accuracy when working with Excel.
@@ -16,7 +13,7 @@ This repository serves as a learning resource for aspiring actuaries and student
 This repository is maintained by a graduate student pursuing a Master's in Actuarial Science at **Middle Tennessee State University (MTSU)**. As an aspiring actuary, the goal is to share knowledge and provide valuable resources for fellow students and professionals in the field.
 
 - **Contact**: [kks2t@mtmail.mtsu.edu](mailto:kks2t@mtmail.mtsu.edu)
-- **Fun Fact**: Did you know? Actuaries are consistently ranked as one of the top professions for job satisfaction and work-life balance!
+- **Fun Fact**: Did you know? The Country i come from Nepal is the country with Mount Everest, where Buddha was born, the Hindu religion originated, and is known for the brave Gorkha warriors!. Just help you locate in map we are in between India and China.
 
 
 
