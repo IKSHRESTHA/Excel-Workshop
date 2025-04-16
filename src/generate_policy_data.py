@@ -5,6 +5,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import random
 from config import *
+import os
 
 class PolicyDataGenerator:
     def __init__(self, num_policies=DEFAULT_NUM_POLICIES, seed=RANDOM_SEED):
@@ -13,15 +14,33 @@ class PolicyDataGenerator:
         self.seed = seed
         self.current_date = datetime(2025, 4, 16)  # Fixed date for reproducibility
         self._set_seeds()
+        self.last_policy_number = self._get_last_policy_number()
         
     def _set_seeds(self):
         """Set all random seeds for reproducibility"""
         random.seed(self.seed)
         np.random.seed(self.seed)
     
+    def _get_last_policy_number(self):
+        """Get the last policy number from existing data"""
+        output_file = '../outputs/Secure20_Term_Life_Data.xlsx'
+        try:
+            if os.path.exists(output_file):
+                existing_data = pd.read_excel(output_file)
+                if not existing_data.empty:
+                    last_number = max([
+                        int(pnum.replace('S20TL', ''))
+                        for pnum in existing_data['Policy_Number']
+                    ])
+                    return last_number
+        except Exception as e:
+            print(f"Warning: Could not read existing policy numbers: {e}")
+        return 0
+    
     def _generate_policy_numbers(self):
-        """Generate unique policy numbers"""
-        return [f'S20TL{str(i).zfill(5)}' for i in range(1, self.num_policies + 1)]
+        """Generate unique policy numbers continuing from last number"""
+        start_num = self.last_policy_number + 1
+        return [f'S20TL{str(i).zfill(5)}' for i in range(start_num, start_num + self.num_policies)]
     
     def _generate_dates_of_birth(self):
         """Generate birth dates for fixed entry age"""
