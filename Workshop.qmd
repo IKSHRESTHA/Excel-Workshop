@@ -1,7 +1,7 @@
 ---
 title: "Excel Workshop for Actuarial Science"
 subtitle: "MTSU Student Actuarial Club"
-author: "MTSU Student Actuarial Club"
+author: "Krishna Kumar Shrestha"
 date: last-modified
 date-format: "DD MMMM YYYY"
 format:
